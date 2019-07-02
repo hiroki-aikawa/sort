@@ -4,6 +4,7 @@
 #define N 2999
 
 int A[N];
+int B[N];
 
 // *p と *q の値を入れ替える関数
 void swap(int *p, int *q){
@@ -31,7 +32,23 @@ int quick_select(int A[], int n, int k){
   else if(j < k+1) return quick_select(A+j, n-j, k-j);
   else return quick_select(A+1, j-1, k);
 }
+//５以下の中央値
+int underfive(int A[], int k){
+  
+}
 
+int median(int A[], int k){
+  if(k <= 5){
+    underfive(A[], k);  
+  }
+  else{
+    for(i = 0; i < n/5; i++){
+    B[i] = underfive();
+    }
+    B[N/5 + 1] = underfive(A[N/5 * 5], N % 5);
+    }
+  }
+}
 
 int main(){
   int i;
